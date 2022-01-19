@@ -1,850 +1,1122 @@
 {
-    "extensionDescription": {
-        "message": "Интеграция KeePassXC в современные веб-браузеры",
-        "description": "Name of the extension."
-    },
-    "contextMenuFillUsernameAndPassword": {
-        "message": "Заполнить логин и пароль",
-        "description": "Context menu item for filling both username and password."
-    },
-    "contextMenuFillPassword": {
-        "message": "Заполнить только пароль",
-        "description": "Context menu item for filling password."
-    },
-    "contextMenuFillTOTP": {
-        "message": "Заполнить одноразовый пароль",
-        "description": "Context menu item for filling Time-based One Time Password."
-    },
-    "contextMenuShowPasswordGeneratorIcons": {
-        "message": "Показывать значки генератора паролей",
-        "description": "Show password generator icon on every password input field."
-    },
-    "contextMenuSaveCredentials": {
-        "message": "Сохранить учетные данные",
-        "description": "Save credentials using the extension popup icon."
-    },
-    "contextMenuShowPasswordGenerator": {
-        "message": "Показать генератор паролей",
-        "description": "Show password generator text."
-    },
-    "rememberCredentialsPopup": {
-        "message": "Создайте или измените учетные данные, щелкнув по значку расширения.",
-        "description": "Notification text when saving credentials from the context menu."
-    },
-    "multipleCredentialsDetected": {
-        "message": "Обнаружена HTTP-аутентификация с несколькими учетными данными. Щелкните по значку расширения и выберите нужные.",
-        "description": "Notification when HTTP Authentication has multiple credentials detected."
-    },
-    "errorMessageUnknown": {
-        "message": "Неизвестная ошибка.",
-        "description": "Unknown error."
-    },
-    "errorMessageDatabaseNotOpened": {
-        "message": "База данных не открыта.",
-        "description": "Database not opened."
-    },
-    "errorMessageDatabaseHash": {
-        "message": "Не получен хеш базы данных.",
-        "description": "Database hash not received."
-    },
-    "errorMessageClientPublicKey": {
-        "message": "Не получен открытый (публичный) ключ клиента.",
-        "description": "Client public key not received."
-    },
-    "errorMessageDecrypt": {
-        "message": "Невозможно расшифровать сообщение.",
-        "description": "Cannot decrypt message."
-    },
-    "errorMessageTimeout": {
-        "message": "Не удается соединиться с KeePassXC. Убедитесь, что интеграция с браузером включена в настройках KeePassXC.",
-        "description": "Cannot connect to KeePassXC. Check that browser integration is enabled in KeePassXC settings."
-    },
-    "errorMessageCanceled": {
-        "message": "Действие отменено или отклонено.",
-        "description": "Action canceled or denied."
-    },
-    "errorMessageEncrypt": {
-        "message": "Шифрование сообщения не удалось. KeePassXC выполняется?",
-        "description": "Message encryption failed. Is KeePassXC running?"
-    },
-    "errorMessageAssociate": {
-        "message": "Ошибка ассоциирования KeePassXC, попробуйте еще раз.",
-        "description": "KeePassXC association failed, try again."
-    },
-    "errorMessageKeyExchange": {
-        "message": "Не выполнен обмен ключами.",
-        "description": "Key exchange was not successful."
-    },
-    "errorMessageEncryptionKey": {
-        "message": "Не распознан ключ шифрования.",
-        "description": "Encryption key is not recognized."
-    },
-    "errorMessageSavedDatabases": {
-        "message": "Нет сохраненных баз данных.",
-        "description": "No saved databases found."
-    },
-    "errorMessageIncorrectAction": {
-        "message": "Некорректное действие.",
-        "description": "Incorrect action."
-    },
-    "errorMessageEmptyMessage": {
-        "message": "Получено пустое сообщение.",
-        "description": "Empty message received."
-    },
-    "errorMessageNoURL": {
-        "message": "Не указан URL.",
-        "description": "No URL provided."
-    },
-    "errorMessageNoLogins": {
-        "message": "Нет логинов.",
-        "description": "No logins found."
-    },
-    "passwordGeneratorIcon": {
-        "message": "Значок генератора паролей",
-        "description": "Alt attribute text of the password generator icon."
-    },
-    "passwordGeneratorPlaceholder": {
-        "message": "Сгенерированный пароль",
-        "description": "Input field placeholder for generated password."
-    },
-    "passwordGeneratorLabel": {
-        "message": "Также заполнять следующее поле пароля",
-        "description": "Checkbox text below the password generator input field."
-    },
-    "passwordGeneratorBits": {
-        "message": "??? бит",
-        "description": "Bits of the generated password."
-    },
-    "passwordGeneratorTitle": {
-        "message": "Генератор паролей",
-        "description": "Password generator dialog title."
-    },
-    "passwordGeneratorGenerate": {
-        "message": "Создать",
-        "description": "Generate button text in password generator."
-    },
-    "passwordGeneratorCopy": {
-        "message": "Скопировать",
-        "description": "Copy button text in password generator."
-    },
-    "passwordGeneratorFillAndCopy": {
-        "message": "Заполнить и скопировать",
-        "description": "Fill and copy button text in password generator."
-    },
-    "passwordGeneratorErrorTooLong": {
-        "message": "ОШИБКА:\nСгенерированный пароль длиннее допустимого!\nОн усечен до предельной длины.\n\nЗапомните новый пароль!",
-        "description": "A warning text shown in the password generator."
-    },
-    "passwordGeneratorGenerateText": {
-        "message": "Создать пароль",
-        "description": "Password icon title text."
-    },
-    "passwordGeneratorError": {
-        "message": "Невозможно получить сгенерированный пароль.<br />Запущена ли программа KeePassXC?",
-        "description": "Password generator error text when KeePassXC is closed."
-    },
-    "defineDismiss": {
-        "message": "Отклонить",
-        "description": "Dismiss button text when choosing custom login fields."
-    },
-    "defineSkip": {
-        "message": "Пропустить",
-        "description": "Skip button text when choosing custom login fields."
-    },
-    "defineMore": {
-        "message": "Показать больше",
-        "description": "More button text when choosing custom login fields."
-    },
-    "defineAgain": {
-        "message": "Снова",
-        "description": "Again button text when choosing custom login fields."
-    },
-    "defineConfirm": {
-        "message": "Подтвердить",
-        "description": "Confirm button text when choosing custom login fields."
-    },
-    "defineAlreadySelected": {
-        "message": "Поля логина для этой страницы уже выбраны и будут перезаписаны.",
-        "description": "A text shown when custom credentials fields are already set for the page."
-    },
-    "defineDiscard": {
-        "message": "Отменить выбор",
-        "description": "Discard selection button text when choosing custom login fields."
-    },
-    "defineStringField": {
-        "message": "Строковое поле #",
-        "description": "Text for string field."
-    },
-    "defineChooseUsername": {
-        "message": "1. Выберите поле логина",
-        "description": "Choosing a username field text when choosing custom login fields."
-    },
-    "defineChoosePassword": {
-        "message": "2. Выберите поле пароля",
-        "description": "Choosing a password field text when choosing custom login fields."
-    },
-    "defineConfirmSelection": {
-        "message": "3. Подтвердите выбор",
-        "description": "Confirm a selection text when choosing custom login fields."
-    },
-    "defineHelpText": {
-        "message": "Подтвердите свой выбор или выберите дополнительные поля <em>Строковые поля</em>.",
-        "description": "Confirm a selection text when choosing custom login fields which contains string fields."
-    },
-    "defineKeyboardText": {
-        "message": "Вы также можете использовать числа для выбора полей ввода с клавиатуры.",
-        "description": "Help text when choosing custom login fields."
-    },
-    "username": {
-        "message": "Логин",
-        "description": "General text for username."
-    },
-    "password": {
-        "message": "Пароль",
-        "description": "General text for password."
-    },
-    "credentialsNoUsername": {
-        "message": "- нет логина -",
-        "description": "Shown when no username is set in the credentials."
-    },
-    "credentialsNoLoginsFound": {
-        "message": "ОШИБКА:\nНе найдены логины.",
-        "description": "Shown when no credentials are found for the current page."
-    },
-    "credentialsMultipleFound": {
-        "message": "ОШИБКА:\nВ KeePassXC обнаружено более одного логина!\nНажмите значок KeePassXC-Browser для дополнительных опций.",
-        "description": "Alert message when trying to fill username and/or password when multiple credentials are found."
-    },
-    "credentialsNoUsernameFound": {
-        "message": "ОШИБКА:\nДля указанного логина нет учетных данных.",
-        "description": "Alert message when no credentials are found for the given username."
-    },
-    "fieldsFill": {
-        "message": "ОШИБКА:\nНет полей для заполнения.",
-        "description": "Alert message when no fields are found to fill in."
-    },
-    "fieldsNoPasswordField": {
-        "message": "ОШИБКА:\nНе найдено поле пароля.",
-        "description": "Message shown when no password fields are found."
-    },
-    "rememberNothingChanged": {
-        "message": "ОШИБКА:\nНе обнаружены измененные учетные данные.",
-        "description": "Message shown when trying to save credentials that haven't changed."
-    },
-    "popupTitle": {
-        "message": "Всплывающее окно KeePassXC",
-        "description": "Popup window title."
-    },
-    "popupSettingsText": {
-        "message": "Настройки",
-        "description": "Popup Settings button text."
-    },
-    "popupChooseCredentialsText": {
-        "message": "Выбор пользовательских полей входа для этой страницы",
-        "description": "Popup credential choosing button text."
-    },
-    "popupConnectButton": {
-        "message": "Соединиться",
-        "description": "Popup Connect button text."
-    },
-    "popupReconnectButton": {
-        "message": "Соединиться заново",
-        "description": "Popup Reconnect button text."
-    },
-    "popupRedetectButton": {
-        "message": "Переопределить поля логина",
-        "description": "Popup Redetect login fields button text."
-    },
-    "popupReloadButton": {
-        "message": "Перезагрузить",
-        "description": "Popup Reload button text."
-    },
-    "popupReopenButton": {
-        "message": "Переоткрыть базу данных",
-        "description": "Popup reopen database button text."
-    },
-    "popupErrorEncountered": {
-        "message": "KeePassXC-Browser обнаружил ошибку:",
-        "description": "A text shown above error message in the popup."
-    },
-    "popupUpdateAvailable": {
-        "message": "Вы используете устаревшую версию KeePassXC.",
-        "description": "Popup warning message about old version of KeePassXC."
-    },
-    "popupDownloadNewVersion": {
-        "message": "Пожалуйста, загрузите последнюю версию с сайта keepassxc.org",
-        "description": "Popup warning message link when KeePassXC version is not up-to-date."
-    },
-    "popupCheckingStatus": {
-        "message": "Проверка статуса...",
-        "description": "Checking status message in popup."
-    },
-    "popupNotConfigured": {
-        "message": "KeePassXC-Browser не настроен. Нажмите кнопку подключения, чтобы связать его с KeePassXC.",
-        "description": "A popup message shown when the extension has not been connected to KeePassXC."
-    },
-    "popupNeedReconfigure": {
-        "message": "KeePassXC-Browser отключен от KeePassXC.",
-        "description": "A popup message shown when the extension has been disconnected from KeePassXC."
-    },
-    "popupNeedReconfigureMessage": {
-        "message": "Нажмите кнопку переподключения, чтобы установить новую связь.",
-        "description": "A popup message shown when reconnect is needed."
-    },
-    "popupConfiguredNotAssociated": {
-        "message": "KeePassXC-Browser еще не подключен к KeePassXC, но настроен с помощью идентификатора: $1",
-        "description": "A popup message shown when KeePassXC is not connected but configured."
-    },
-    "popupConfiguredAndAssociated": {
-        "message": "KeePassXC-Browser подключен к KeePassXC и настроен с помощью этого идентификатора: $1",
-        "description": "A popuo message when a connection to KeePassXC is succesful."
-    },
-    "popupRememberInfoText": {
-        "message": "Изменились логин или пароль! Сохранить?",
-        "description": "Popup message when username or password has changed."
-    },
-    "popupRememberSaving": {
-        "message": "Учетные данные будут сохранены в подключенной базе данных с идентификатором $1",
-        "description": "A popup message when saving or updating credentials."
-    },
-    "popupRememberNewUsername": {
-        "message": "Следующий логин сейчас не сохранен: $1",
-        "description": "A popup message shown when a new username is detected when saving credentials."
-    },
-    "popupRememberUsernameExists": {
-        "message": "Учетные данные с используемым логином выделены жирным: $1",
-        "description": "A popup message shown when a existing username is detected when saving credentials."
-    },
-    "popupRememberChooseCredentials": {
-        "message": "Выберите учетные данные, которые хотите обновить.",
-        "description": "A popup message shown choosing what credentials user wants to update."
-    },
-    "popupRememberChooseGroup": {
-        "message": "Пожалуйста, выберите группу, в которую Вы хотите добавить новые учетные данные.",
-        "description": "A popup message shown choosing what group user wants to use for new credentials."
-    },
-    "popupRememberErrorDefaultGroupNotFound": {
-        "message": "Ошибка: указанная группа по умолчанию не найдена. Создание всех необходимых групп.",
-        "description": "Error message shown when default group set cannot be found."
-    },
-    "popupRememberErrorCreatingNewGroup": {
-        "message": "Не удается создать новую(ые) группу(ы).",
-        "description": "Error message shown when new groups cannot be created."
-    },
-    "popupRememberErrorPasswordNotChanged": {
-        "message": "Ошибка: учетные данные не обновлены. Пароль не был изменен.",
-        "description": "Error message shown when credential password is not changed."
-    },
-    "popupRememberErrorCannotSaveCredentials": {
-        "message": "Ошибка: учетные данные не могут быть сохранены или обновлены.",
-        "description": "Error message shown when credentials cannot be saved or updated."
-    },
-    "popupLoginText": {
-        "message": "Выберите информацию для входа на эту страницу.",
-        "description": "A popup message shown when one or multiple credentials are present."
-    },
-    "popupFilterText": {
-        "message": "Фильтр:",
-        "description": "Text for login credentials quick filter."
-    },
-    "popupAuthText": {
-        "message": "Выберите информацию для входа, которую вы использовали.",
-        "description": "A popup message shown when doing HTTP Authentication with multiple credentials present."
-    },
-    "popupMultiplePasswordFields": {
-        "message": "На этой странице более одного поля для ввода пароля. Щелкните правой кнопкой мыши по одному из полей и выберите один из:",
-        "description": "A popup message shown when web page has multiple password fields."
-    },
-    "popupURL": {
-        "message": "URL: ",
-        "description": "URL. Might not need any translation."
-    },
-    "popupUsername": {
-        "message": "Логин:",
-        "description": "A username field name shown on credential update."
-    },
-    "popupButtonNew": {
-        "message": "Новые",
-        "description": "New button text in popup when updating credentials."
-    },
-    "popupButtonUpdate": {
-        "message": "Обновить",
-        "description": "Update button text in popup when updating credentials."
-    },
-    "popupButtonDismiss": {
-        "message": "Отклонить",
-        "description": "Dismiss button text in popup when updating credentials."
-    },
-    "popupButtonIgnore": {
-        "message": "Не спрашивать для этой страницы",
-        "description": "Ignore button text in popup or in notification when updating credentials."
-    },
-    "popupButtonClose": {
-        "message": "Закрыть",
-        "description": "Close button text in popup or in notification."
-    },
-    "popupButtonDismissHttpAuth": {
-        "message": "Отклонить и показать диалог аутентификации по умолчанию",
-        "description": "Dismiss button text when in HTTP Authentication popup."
-    },
-    "optionsTitle": {
-        "message": "Настройки | KeePassXC-Browser",
-        "description": "Options page title."
-    },
-    "optionsGeneralSettingsTab": {
-        "message": "Общие настройки",
-        "description": "General Settings tab text."
-    },
-    "optionsConnectedDatabasesTab": {
-        "message": "Подключенные базы",
-        "description": "Connected Databases tab text."
-    },
-    "optionsCustomFieldsTab": {
-        "message": "Свои поля логина",
-        "description": "Saved custom login fields tab text."
-    },
-    "optionsSitePreferencesTab": {
-        "message": "Настройки сайта",
-        "description": "Site preferences fields tab text."
-    },
-    "optionsAboutTab": {
-        "message": "Сведения",
-        "description": "About tab text."
-    },
-    "optionsMenuGeneral": {
-        "message": "Общие",
-        "description": "General settings page header."
-    },
-    "optionsMenuConnectedDatabases": {
-        "message": "Подключенные базы",
-        "description": "Connected Databases page header."
-    },
-    "optionsMenuCustomFields": {
-        "message": "Свои поля логина",
-        "description": "Custom login fields page header."
-    },
-    "optionsMenuSitePreferences": {
-        "message": "Настройки сайта",
-        "description": "Site preferences page header."
-    },
-    "optionsMenuAbout": {
-        "message": "Сведения",
-        "description": "About page header."
-    },
-    "optionsConfigureShortcuts": {
-        "message": "Настроить ярлыки",
-        "description": "Keyboard shortcut button and title text."
-    },
-    "optionsButtonSave": {
-        "message": "Сохранить",
-        "description": "Save button text."
-    },
-    "optionsButtonConnect": {
-        "message": "Подключение",
-        "description": "Connect button text."
-    },
-    "optionsButtonRemove": {
-        "message": "Удалить",
-        "description": "Remove button text."
-    },
-    "optionsButtonAdd": {
-        "message": "Добавить",
-        "description": "Add button text."
-    },
-    "optionsButtonUpdate": {
-        "message": "Проверить обновления",
-        "description": "Check for updates button text."
-    },
-    "optionsButtonRemoveNow": {
-        "message": "Да, удалить сейчас",
-        "description": "Confirm button text when removing database key or custom login fields."
-    },
-    "optionsButtonCancel": {
-        "message": "Отмена",
-        "description": "Cancel button text when removing database key or custom login fields."
-    },
-     "optionsButtonReset": {
-        "message": "Сброс",
-        "description": "Reset button text for keyboard shortcuts."
-    },
-    "optionsLabelBlinkTime": {
-        "message": "Время мерцания:",
-        "description": "Blink Time option text."
-    },
-    "optionsLabelRedirectOffset": {
-        "message": "Смещение перенаправления:",
-        "description": "Redirect Offset option text."
-    },
-    "optionsLabelRedirectAllowance": {
-        "message": "Максимум перенаправлений:",
-        "description": "RMaximum (Number of) Redirects options text."
-    },
-    "optionsLabelDefaultGroup": {
-        "message": "Группа по умолчанию для сохранения новых паролей:",
-        "description": "Default group options text."
-    },
-    "optionsDefaultGroupHelpText": {
-        "message": "Разделите группу слэшами, например: Группа/ДочерняяГруппа.",
-        "description": "Default group help text."
-    },
-    "optionsLabelDefaultGroupCheckboxText": {
-        "message": "Всегда спрашивать, куда сохранять новые учетные данные",
-        "description": "Default group checkbox help text."
-    },
-    "optionsLabelDefaultGroupCheckboxHelpText": {
-        "message": "Когда включено, всплывающее окошко показывает список групп.",
-        "description": "Default checkbox explanation help text."
-    },
-    "optionsCheckboxUsePasswordGenerator": {
-        "message": "Вызов генератора паролей.",
-        "description": "Activate password generator checkbox text."
-    },
-    "optionsCheckboxAutoRetrieveCredentials": {
-        "message": "Автоматически извлекать учетные данные.",
-        "description": "Automatically retrieve credentials checkbox text."
-    },
-    "optionsCheckboxAutoFillSingleEntry": {
-        "message": "Автозаполнение элементов с единственными учетными данными.",
-        "description": "Automatically fill-in single credential entry checkbox text."
-    },
-    "optionsCheckboxAutoCompleteUsernames": {
-        "message": "Автозаполнение для полей логина.",
-        "description": "Activate autocomplete for username fields checkbox text."
-    },
-    "optionsCheckboxShowNotifications": {
-        "message": "Показывать уведомления.",
-        "description": "Show notifications checkbox text."
-    },
-    "optionsSaveDomainOnly": {
-        "message": "Сохранять только домен.",
-        "description": "Save domain only checkbox text."
-    },
-    "optionsCheckboxShowLoginNotifications": {
-        "message": "Показывать уведомление, когда есть новые учетные данные для сохранения в базе данных.",
-        "description": "Show login notifications checkbox text."
-    },
-    "optionsCheckboxAutoFillAndSend": {
-        "message": "Автозаполнение окон с простой HTTP-аутентификацией и отправка данных.",
-        "description": "Auto fill HTTP Basic Auth dialogs and send them checkbox text."
-    },
-    "optionsRadioText": {
-        "message": "Проверять обновления KeePassXC:",
-        "description": "Text above radio buttons in the settings page."
-    },
-    "optionsRadioThreeDays": {
-        "message": "каждые 3 дня",
-        "description": "Radio button text."
-    },
-    "optionsRadioWeek": {
-        "message": "каждую неделю",
-        "description": "Radio button text."
-    },
-    "optionsRadioMonth": {
-        "message": "каждый месяц",
-        "description": "Radio button text."
-    },
-    "optionsRadioNever": {
-        "message": "никогда",
-        "description": "Radio button text."
-    },
-    "optionsKeyboardShortcutsHeader": {
-        "message": "Клавиатурные сокращения",
-        "description": "Keyboard shortcut header text."
-    },
-    "optionsBlinkTimeHelpText": {
-        "message": "Максимальное время (мс) мерцания значка при обнаружении новых учетных данных",
-        "description": "Blink Time option help text."
-    },
-    "optionsRedirectOffsetHelpText": {
-        "message": "Минимальное время (мс) мерцания значка перед деактивацией из-за перенаправлений страниц.",
-        "description": "Redirect Offset option help text."
-    },
-    "optionsRedirectOffsetHelpTextSecond": {
-        "message": "-1 = использовать только время мерцания, игнорируя максимум перенаправлений (старое поведение)",
-        "description": "Redirect Offset option help text, second part."
-    },
-    "optionsRedirectAllowanceHelpText": {
-        "message": "Число страниц для цикличного перебора после смещения перенаправления перед деактивацией значка",
-        "description": "Redirect Allowance option help text."
-    },
-    "optionsUsePasswordGeneratorHelpText": {
-        "message": "Добавляет кнопку к полям пароля для генерирования нового пароля.",
-        "description": "Password Generator option help text."
-    },
-    "optionsUsePasswordGeneratorHelpTextSecond": {
-        "message": "Пароли, созданные KeePassXC с помощью вашего профиля генерирования паролей.",
-        "description": "Password Generator option help text, second part."
-    },
-    "optionsAutoRetrieveCredentialsHelpText": {
-        "message": "KeePassXC-Browser будет извлекать учетные данные сразу при активации вкладки.",
-        "description": "Auto-Retrive Credentials option help text."
-    },
-    "optionsAutoFillSingleEntryHelpText": {
-        "message": "Разрешить KeePassXC-Browser автоматически заполнять учетные данные, если он получает только одиночный элемент.",
-        "description": "Auto-Fill Single Entry option help text."
-    },
-    "optionsAutoFillSingleEntryWarning": {
-        "message": "Внимание! Автозаполнение небезопасно! Используйте его на свой риск.",
-        "description": "Auto-Fill Single Entry warning text."
-    },
-    "optionsAutocompleteUsernamesHelpText": {
-        "message": "Показывать выпадающий список с доступными учетными данными для всех полей логина на странице.",
-        "description": "Autocomplete Usernames option help text."
-    },
-    "optionsShowNotificationsHelpText": {
-        "message": "Уведомлять об ошибках, когда требуется вмешательство пользователя.",
-        "description": "Show notifications option help text."
-    },
-    "optionsSaveDomainOnlyHelpText": {
-        "message": "При сохранении новых учетных данных сохранять только домен, а не полный URL.",
-        "description": "Save domain only option help text."
-    },
-    "optionsAutoFillAndSendHelpText": {
-        "message": "Если на странице есть учетные данные, и тип входа - запрос простой HTTP-аутентификации, KeePassXC-Browser войти с первыми указанными учетными данными.",
-        "description": "Auto-Fill And Send option help text."
-    },
-    "optionsAutoFillAndSendHelpTextSecond": {
-        "message": "Окно простой HTTP-аутентификации выглядит так:",
-        "description": "HTTP Basic Auth image help text."
-    },
-    "optionsVersionInfoText": {
-        "message": "Для извлечения учетных данных KeePassXC-Browser требуется KeePassXC.",
-        "description": "Settings page version info text."
-    },
-    "optionsVersionDownload": {
-        "message": "Новейшую стабильную версию можно загрузить с $1",
-        "description": "Settings page download link."
-    },
-    "optionsVersionRunning": {
-        "message": "У вас сейчас KeePassXC версии $1",
-        "description": "Settings page info text of user's KeePassXC version."
-    },
-    "optionsLatestVersion": {
-        "message": "Новейшая версия KeePassXC: $1",
-        "description": "Settings page info text about the latest KeePassXC version."
-    },
-    "optionsDefault": {
-        "message": "По умолчанию: $1",
-        "description": "Default setting text."
-    },
-    "optionsInfinite": {
-        "message": "Неопределенный: $1",
-        "description": "Infinite setting text."
-    },
-    "optionsRecommended": {
-        "message": "Рекомендуется: $1",
-        "description": "Recommended setting text."
-    },
-    "optionsShortcutsSuccess": {
-        "message": "Ярлык для $1 был успешно изменен.",
-        "description": "Message for successful keyboard shortcut change."
-    },
-     "optionsShortcutsInfo": {
-        "message": "Ярлык для $1 был сброшен.",
-        "description": "Info message for changing keyboard shortcuts."
-    },
-     "optionsShortcutsDanger": {
-        "message": "Ошибка: Ярлык для $1 изменен не был!",
-        "description": "Error message for changing keyboard shortcuts."
-    },
-    "optionsConnectedDatabasesText": {
-        "message": "Эти базы данных KeePassXC подключены к KeePassXC-Browser.",
-        "description": "Info text about connected databases."
-    },
-    "optionsConnectedDatabasesNotFound": {
-        "message": "Нет подключенных баз данных.",
-        "description": "Shown in the connected databases table when there is no connected databases."
-    },
-    "optionsDatabasesRemoveIdentifier": {
-        "message": "Удалить идентификатор из списка баз данных?",
-        "description": "Confirmation text when removing database from the list."
-    },
-    "optionsDatabasesRemoveIdentifierConfirmFirst": {
-        "message": "Вы действительно хотите удалить следующий идентификатор из списка баз данных?",
-        "description": "Confirmation text when removing database from the list."
-    },
-    "optionsDatabasesRemoveIdentifierConfirmSecond": {
-        "message": "Базу данных можно в любое время подключить повторно.",
-        "description": "Confirmation text when removing database from the list, second part."
-    },
-    "optionsDatabaseIdentifier": {
-        "message": "Идентификатор",
-        "description": "Database list column title."
-    },
-    "optionsDatabaseKey": {
-        "message": "Ключ",
-        "description": "Database list column title."
-    },
-    "optionsDatabaseLastUsed": {
-        "message": "Последний",
-        "description": "Database list column title."
-    },
-    "optionsDatabaseCreated": {
-        "message": "Создан",
-        "description": "Database list column title."
-    },
-    "optionsDatabaseDelete": {
-        "message": "Удалить",
-        "description": "Database list column title."
-    },
-    "optionsColumnPageURL": {
-        "message": "URL страницы",
-        "description": "Site preferences list column title."
-    },
-     "optionsColumnIgnore": {
-        "message": "Пропустить",
-        "description": "Site preferences list column title."
-    },
-     "optionsColumnUsernameOnly": {
-        "message": "Определение только по логину",
-        "description": "Site preferences list column title."
-    },
-    "optionsColumnDelete": {
-        "message": "Удалить",
-        "description": "Site preferences list column title."
-    },
-    "optionsSelectionNothing": {
-        "message": "Включить все функции",
-        "description": "Site preferences option selection."
-    },
-    "optionsSelectionNormal": {
-        "message": "Отключить новые/измененные учетные данные",
-        "description": "Site preferences option selection."
-    },
-    "optionsSelectionFull": {
-        "message": "Отключить все функции",
-        "description": "Site preferences option selection."
-    },
-    "optionsCustomFieldsNotFound": {
-        "message": "Нет сохраненных пользовательских полей логина.",
-        "description": "Shown when no saved custom credentials are saved."
-    },
-    "optionsCustomFieldsTableCaption": {
-        "message": "Вы можете управлять сохраненными пользовательскими полями логина, используя таблицу ниже.",
-        "description": "Table caption of Custom login fields page."
-    },
-    "optionsCustomFieldsTabHelpTextFirst": {
-        "message": "Если KeePassXC-Browser обнаруживает неверные поля логина, вы можете сами указать правильные поля.",
-        "description": "Saved custom login fields info text, first part."
-    },
-    "optionsCustomFieldsTabHelpTextSecond": {
-        "message": "Перейдите на страницу и нажмите значок KeePassXC-Browser, затем выберите ",
-        "description": "Saved custom login fields info text, second part."
-    },
-    "optionsCustomFieldsRemove": {
-        "message": "Удалить сохраненные пользовательские поля логина?",
-        "description": "Confirmation text when removing saved custom login fields."
-    },
-    "optionsCustomFieldsConfirmation": {
-        "message": "Вы действительно хотите удалить сохраненные пользовательские поля логина на странице: $1",
-        "description": "Confirmation text when removing saved custom login fields."
-    },
-    "optionsCustomFieldsConfirmationHelpText": {
-        "message": "KeePassXC-Browser будет автоматически обнаруживать поля логина при следующем посещении этой страницы.",
-        "description": "Part of confirmation text when removing saved custom login fields."
-    },
-    "optionsSitePreferencesNotFound": {
-        "message": "Нет игнорируемых сайтов.",
-        "description": "Shown when no ignored sites are saved."
-    },
-    "optionsSitePreferencesRemove": {
-        "message": "Удалить сайт?",
-        "description": "Confirmation text when removing ignored sites from the list."
-    },
-    "optionsSitePreferencesTabHelpTextFirst": {
-        "message": "У сайтов на этой странице особые связанные с ними методы обработки.",
-        "description": "Site preferences info text, first part."
-    },
-    "optionsSitePreferencesTabHelpTextSecond": {
-        "message": "Для игнорирования новых/измененных учетных данных на каком-либо сайте добавьте их ниже или щелкните по мерцающему значку KeePassXC-Browser и выберите ",
-        "description": "Site preferences info text, second part."
-    },
-    "optionsSitePreferencesTabHelpTextThird": {
-        "message": "Если сайт полностью игнорируется (выбрано <em>Отключить все функции</em>), то при посещении такого сайта плагин ничего не будет делать.",
-        "description": "Site preferences info text, third part."
-    },
-    "optionsSitePreferencesTabHelpTextFourth": {
-        "message": "Определение только по логину позволяет KeePassXC-Browser заполнять детали входа на сайтах, где логин и пароль находятся на разных страницах.",
-        "description": "Site preferences info text, fourth part."
-    },
-    "optionsSitePreferencesManualAddText": {
-        "message": "Добавить URL вручную",
-        "description": "Label for adding site manually on Site preferences tab."
-    },
-    "optionsSitePreferencesConfirmation": {
-        "message": "Вы действительно хотите удалить указанный сайт из списка: $1",
-        "description": "Confirmation text when removing site from site preferences."
-    },
-    "optionsSitePreferencesConfirmationHelpText": {
-        "message": "KeePassXC-Browser включит все функции для этого сайта и удалит определение только по логину.",
-        "description": "Part of confirmation text when removing site preferences."
-    },
-    "optionsSitePreferencesTableCaption": {
-        "message": "Вы можете управлять сохраненными настройками сайтов, используя таблицу ниже.",
-        "description": "Table caption of Site Preferences page."
-    },
-    "optionsSitePreferencesSelect": {
-        "message": "Опция для игнорирования деталей расширения для страницы.",
-        "description": "Title text of select element in Site Preferences."
-    },
-    "optionsAboutChrome": {
-        "message": "KeePassXC-Browser в Chrome Web Store.",
-        "description": "About page link to Chrome Web Store."
-    },
-    "optionsAboutMozilla": {
-        "message": "KeePassXC-Browser в каталоге дополнений Mozilla.",
-        "description": "About page link to AMO."
-    },
-    "optionsAboutGitHub": {
-        "message": "KeePassXC-Browser на GitHub.",
-        "description": "About page link to GitHub."
-    },
-    "optionsAboutExtensionVersion": {
-        "message": "Версия KeePassXC-Browser: $1",
-        "description": "About page text of extension version."
-    },
-    "optionsAboutKeePassXCVersion": {
-        "message": "Версия KeePassXC: $1",
-        "description": "About page text of KeePassXC version."
-    },
-    "optionsAboutContributors": {
-        "message": "Авторы",
-        "description": "About page text of contributors."
-    },
-    "optionsAboutLicenses": {
-        "message": "Лицензии",
-        "description": "About page text of licenses."
-    },
-    "optionsAboutReportBugs": {
-        "message": "Сообщать об ошибках",
-        "description": "About page text of reporting bugs."
-    },
-    "optionsAboutCreateNewIssue": {
-        "message": "Создать новую проблему на GitHub",
-        "description": "Link text for creating a new issue."
-    },
-    "optionsAboutDebugInfo": {
-        "message": "Может быть использована следующая отладочная информация",
-        "description": "Debug info text."
-    },
-    "optionsErrorInvalidValue": {
-        "message": "Неверное значение. Пожалуйста, проверьте ввод.",
-        "description": "Error shown when input field has an incorrect value."
-    },
-    "optionsErrorInvalidURL": {
-        "message": "Неверный URL. Пожалуйста, проверьте ввод.",
-        "description": "Error shown when input field has an incorrect URL."
-    },
-    "optionsErrorValueExists": {
-        "message": "Значение уже существует в списке.",
-        "description": "Error shown when trying to add a duplicate value to the list."
-    },
-    "openNewTab": {
-        "message": "Открывает новую закладку",
-        "description": "Title attribute text."
-    },
-    "httpAuthDialog": {
-        "message": "Диалог базовой аутентификации HTTP",
-        "description": "Options page HTTP Basic Auth dialog text"
-    }
+   "autocompleteSubmitMessage": {
+      "description": "Message shown at the bottom of autocomplete menu.",
+      "message": "Ваш выбор будет отправлен автоматически"
+   },
+   "contextMenuFillAttribute": {
+      "description": "Context menu parent item for filling a custom attribute.",
+      "message": "Заполните атрибут..."
+   },
+   "contextMenuFillPassword": {
+      "description": "Context menu item for filling password.",
+      "message": "Заполнить только пароль"
+   },
+   "contextMenuFillTOTP": {
+      "description": "Context menu item for filling Time-based One Time Password.",
+      "message": "Заполнить одноразовый пароль"
+   },
+   "contextMenuFillUsernameAndPassword": {
+      "description": "Context menu item for filling both username and password.",
+      "message": "Заполнить логин и пароль"
+   },
+   "contextMenuRequestGlobalAutoType": {
+      "description": "Global Auto-Type shortcut text.",
+      "message": "Запросить глобальное автозаполнение"
+   },
+   "contextMenuSaveCredentials": {
+      "description": "Save credentials using the credential banner.",
+      "message": "Сохранить учетные данные"
+   },
+   "contextMenuShowPasswordGenerator": {
+      "description": "Show password generator text.",
+      "message": "Показать генератор паролей"
+   },
+   "contextMenuShowPasswordGeneratorIcons": {
+      "description": "Show password generator icon on every password input field.",
+      "message": "Показывать значки генератора паролей"
+   },
+   "credentialExpired": {
+      "description": "If a credential is expired, this is appended to the title label.",
+      "message": "Истекло"
+   },
+   "credentialsMultipleFound": {
+      "description": "Alert message when trying to fill username and/or password when multiple credentials are found.",
+      "message": "ОШИБКА:\nВ KeePassXC обнаружено более одного логина!\nНажмите значок KeePassXC-Browser для дополнительных опций."
+   },
+   "credentialsMultipleFoundSecondLine": {
+      "description": "Alert message when trying to fill username and/or password when multiple credentials are found.",
+      "message": "Нажмите значок KeePassXC-Browser для дополнительных опций."
+   },
+   "credentialsNoLoginsFound": {
+      "description": "Shown when no credentials are found for the current page.",
+      "message": "ОШИБКА:\nНе найдены логины."
+   },
+   "credentialsNoTOTPFound": {
+      "description": "Alert message when no TOTP is found.",
+      "message": "TOTP не найден."
+   },
+   "credentialsNoUsername": {
+      "description": "Shown when no username is set in the credentials.",
+      "message": "- нет логина -"
+   },
+   "credentialsNoUsernameFound": {
+      "description": "Alert message when no credentials are found for the given username.",
+      "message": "ОШИБКА:\nДля указанного логина нет учетных данных."
+   },
+   "defineAgain": {
+      "description": "Again button text when choosing custom login fields.",
+      "message": "Снова"
+   },
+   "defineAlreadySelected": {
+      "description": "A text shown when custom credentials fields are already set for the page.",
+      "message": "Поля логина для этой страницы уже выбраны и будут перезаписаны."
+   },
+   "defineChoosePassword": {
+      "description": "Choosing a password field text when choosing custom login fields.",
+      "message": "2. Выберите поле пароля"
+   },
+   "defineChooseTOTP": {
+      "description": "Choosing a TOTP field text when choosing custom login fields.",
+      "message": "3. Выберите поле одноразового пароля"
+   },
+   "defineChooseUsername": {
+      "description": "Choosing a username field text when choosing custom login fields.",
+      "message": "1. Выберите поле логина"
+   },
+   "defineConfirm": {
+      "description": "Confirm button text when choosing custom login fields.",
+      "message": "Подтвердить"
+   },
+   "defineConfirmSelection": {
+      "description": "Confirm a selection text when choosing custom login fields.",
+      "message": "3. Подтвердите выбор"
+   },
+   "defineDiscard": {
+      "description": "Discard selection button text when choosing custom login fields.",
+      "message": "Отменить выбор"
+   },
+   "defineDismiss": {
+      "description": "Dismiss button text when choosing custom login fields.",
+      "message": "Отклонить"
+   },
+   "defineHelpText": {
+      "description": "Confirm a selection text when choosing custom login fields which contains string fields.",
+      "message": "Подтвердите свой выбор или выберите дополнительные поля \u003Cem>Строковые поля\u003C/em>."
+   },
+   "defineKeyboardText": {
+      "description": "Help text when choosing custom login fields.",
+      "message": "Вы также можете использовать числа для выбора полей ввода с клавиатуры."
+   },
+   "defineMore": {
+      "description": "More button text when choosing custom login fields.",
+      "message": "Показать больше"
+   },
+   "defineSkip": {
+      "description": "Skip button text when choosing custom login fields.",
+      "message": "Пропустить"
+   },
+   "defineStringField": {
+      "description": "Text for string field.",
+      "message": "Строковое поле #"
+   },
+   "errorMessageAssociate": {
+      "description": "KeePassXC association failed, try again.",
+      "message": "Ошибка ассоциирования KeePassXC, попробуйте еще раз."
+   },
+   "errorMessageCanceled": {
+      "description": "Action canceled or denied.",
+      "message": "Действие отменено или отклонено."
+   },
+   "errorMessageClientPublicKey": {
+      "description": "Client public key not received.",
+      "message": "Не получен открытый (публичный) ключ клиента."
+   },
+   "errorMessageDatabaseHash": {
+      "description": "Database hash not received.",
+      "message": "Не получен хеш базы данных."
+   },
+   "errorMessageDatabaseNotOpened": {
+      "description": "Database not opened.",
+      "message": "База данных не открыта."
+   },
+   "errorMessageDecrypt": {
+      "description": "Cannot decrypt message.",
+      "message": "Невозможно расшифровать сообщение."
+   },
+   "errorMessageEmptyMessage": {
+      "description": "Empty message received.",
+      "message": "Получено пустое сообщение."
+   },
+   "errorMessageEncrypt": {
+      "description": "Message encryption failed. Is KeePassXC running?",
+      "message": "Шифрование сообщения не удалось. KeePassXC выполняется?"
+   },
+   "errorMessageEncryptionKey": {
+      "description": "Encryption key is not recognized.",
+      "message": "Не распознан ключ шифрования."
+   },
+   "errorMessageIncorrectAction": {
+      "description": "Incorrect action.",
+      "message": "Некорректное действие."
+   },
+   "errorMessageKeyExchange": {
+      "description": "Key exchange was not successful.",
+      "message": "Не выполнен обмен ключами."
+   },
+   "errorMessageNoLogins": {
+      "description": "No logins found.",
+      "message": "Нет логинов."
+   },
+   "errorMessageNoURL": {
+      "description": "No URL provided.",
+      "message": "Не указан URL."
+   },
+   "errorMessageSavedDatabases": {
+      "description": "No saved databases found.",
+      "message": "Нет сохраненных баз данных."
+   },
+   "errorMessageTimeout": {
+      "description": "Cannot connect to KeePassXC. Check that browser integration is enabled in KeePassXC settings.",
+      "message": "Не удается соединиться с KeePassXC. Убедитесь, что интеграция с браузером включена в настройках KeePassXC."
+   },
+   "errorMessageUnknown": {
+      "description": "Unknown error.",
+      "message": "Неизвестная ошибка."
+   },
+   "errorNotConnected": {
+      "description": "Error notification shown when not connected to KeePassXC",
+      "message": "Не подключен к KeePassXC."
+   },
+   "extensionDescription": {
+      "description": "Name of the extension.",
+      "message": "Интеграция KeePassXC в современные веб-браузеры"
+   },
+   "fieldsFill": {
+      "description": "Alert message when no fields are found to fill in.",
+      "message": "ОШИБКА:\nНет полей для заполнения."
+   },
+   "fieldsNoPasswordField": {
+      "description": "Message shown when no password fields are found.",
+      "message": "ОШИБКА:\nНе найдено поле пароля."
+   },
+   "httpAuthDialog": {
+      "description": "Options page HTTP Basic Auth dialog text",
+      "message": "Диалог базовой аутентификации HTTP"
+   },
+   "lockDatabase": {
+      "description": "Lock database button title text.",
+      "message": "Заблокировать базу данных"
+   },
+   "multipleCredentialsDetected": {
+      "description": "Notification when HTTP Authentication has multiple credentials detected.",
+      "message": "Обнаружена HTTP-аутентификация с несколькими учетными данными. Щелкните по значку расширения и выберите нужные."
+   },
+   "openNewTab": {
+      "description": "Title attribute text.",
+      "message": "Открывает новую закладку"
+   },
+   "optionsAboutChrome": {
+      "description": "About page link to Chrome Web Store.",
+      "message": "KeePassXC-Browser в Chrome Web Store."
+   },
+   "optionsAboutContributors": {
+      "description": "About page text of contributors.",
+      "message": "Авторы"
+   },
+   "optionsAboutCreateNewIssue": {
+      "description": "Link text for creating a new issue.",
+      "message": "Создать новую проблему на GitHub"
+   },
+   "optionsAboutDebugInfo": {
+      "description": "Debug info text.",
+      "message": "Может быть использована следующая отладочная информация"
+   },
+   "optionsAboutExtensionVersion": {
+      "description": "About page text of extension version.",
+      "message": "Версия KeePassXC-Browser: $1"
+   },
+   "optionsAboutGitHub": {
+      "description": "About page link to GitHub.",
+      "message": "KeePassXC-Browser на GitHub."
+   },
+   "optionsAboutKeePassXCVersion": {
+      "description": "About page text of KeePassXC version.",
+      "message": "Версия KeePassXC: $1"
+   },
+   "optionsAboutLicenses": {
+      "description": "About page text of licenses.",
+      "message": "Лицензии"
+   },
+   "optionsAboutMozilla": {
+      "description": "About page link to AMO.",
+      "message": "KeePassXC-Browser в каталоге дополнений Mozilla."
+   },
+   "optionsAboutReportBugs": {
+      "description": "About page text of reporting bugs.",
+      "message": "Сообщать об ошибках"
+   },
+   "optionsAboutSupporters": {
+      "description": "Supporters label text.",
+      "message": "Поддержка"
+   },
+   "optionsAboutTab": {
+      "description": "About tab text.",
+      "message": "Сведения"
+   },
+   "optionsAdvancedSettingsTitle": {
+      "description": "Advanced settings title in settings page",
+      "message": "Расширенные настройки"
+   },
+   "optionsAutoFillAndSendHelpText": {
+      "description": "Auto-Fill And Send option help text.",
+      "message": "Если на странице есть учетные данные, и тип входа - запрос простой HTTP-аутентификации, KeePassXC-Browser войти с первыми указанными учетными данными."
+   },
+   "optionsAutoFillAndSendHelpTextSecond": {
+      "description": "HTTP Basic Auth image help text.",
+      "message": "Окно простой HTTP-аутентификации выглядит так:"
+   },
+   "optionsAutoFillSingleEntryHelpText": {
+      "description": "Auto-Fill Single Entry option help text.",
+      "message": "Разрешить KeePassXC-Browser автоматически заполнять учетные данные, если он получает только одиночный элемент."
+   },
+   "optionsAutoFillSingleEntryWarning": {
+      "description": "Auto-Fill Single Entry warning text.",
+      "message": "Внимание! Автозаполнение небезопасно! Используйте его на свой риск."
+   },
+   "optionsAutoRetrieveCredentialsHelpText": {
+      "description": "Auto-Retrive Credentials option help text.",
+      "message": "KeePassXC-Browser будет извлекать учетные данные сразу при активации вкладки."
+   },
+   "optionsAutoSubmitHelpText": {
+      "description": "Auto-submit help text.",
+      "message": "Автоматически отправлять выбранные учетные данные. Для автозаполнения одиночных записей отключено."
+   },
+   "optionsAutocompleteUsernamesHelpText": {
+      "description": "Autocomplete Usernames option help text.",
+      "message": "Показывать выпадающий список с доступными учетными данными для всех полей логина на странице."
+   },
+   "optionsAutomaticReconnectHelpText": {
+      "description": "Auto-reconnect option help text.",
+      "message": "Автоматически переподключаться к KeePassXC при его обнаружении."
+   },
+   "optionsAutomaticReconnectWarning": {
+      "description": "Auto-reconnect warning message.",
+      "message": "Внимание! Эта функция является экспериментальной. Используйте ее на свой страх и риск."
+   },
+   "optionsButtonAdd": {
+      "description": "Add button text.",
+      "message": "Добавить"
+   },
+   "optionsButtonCancel": {
+      "description": "Cancel button text when removing database key or custom login fields.",
+      "message": "Отмена"
+   },
+   "optionsButtonConnect": {
+      "description": "Connect button text.",
+      "message": "Подключение"
+   },
+   "optionsButtonExport": {
+      "description": "Export settings button text.",
+      "message": "Экспорт настроек"
+   },
+   "optionsButtonImport": {
+      "description": "Import settings button text.",
+      "message": "Импортировать настройки"
+   },
+   "optionsButtonRemove": {
+      "description": "Remove button text.",
+      "message": "Удалить"
+   },
+   "optionsButtonRemoveNow": {
+      "description": "Confirm button text when removing database key or custom login fields.",
+      "message": "Да, удалить сейчас"
+   },
+   "optionsButtonReset": {
+      "description": "Reset button text for keyboard shortcuts.",
+      "message": "Сброс"
+   },
+   "optionsButtonSave": {
+      "description": "Save button text.",
+      "message": "Сохранить"
+   },
+   "optionsButtonUpdate": {
+      "description": "Check for updates button text.",
+      "message": "Проверить обновления"
+   },
+   "optionsCheckboxAutoCompleteUsernames": {
+      "description": "Activate autocomplete for username fields checkbox text.",
+      "message": "Автозаполнение для полей логина."
+   },
+   "optionsCheckboxAutoFillAndSend": {
+      "description": "Auto fill HTTP Basic Auth dialogs and send them checkbox text.",
+      "message": "Автозаполнение окон с простой HTTP-аутентификацией и отправка данных."
+   },
+   "optionsCheckboxAutoFillSingleEntry": {
+      "description": "Automatically fill-in single credential entry checkbox text.",
+      "message": "Автозаполнение элементов с единственными учетными данными."
+   },
+   "optionsCheckboxAutoRetrieveCredentials": {
+      "description": "Automatically retrieve credentials checkbox text.",
+      "message": "Автоматически извлекать учетные данные."
+   },
+   "optionsCheckboxAutoSubmit": {
+      "description": "Auto-submit checkbox text.",
+      "message": "Автоотправка форм входа"
+   },
+   "optionsCheckboxAutomaticReconnect": {
+      "description": "Auto-reconnect checkbox text.",
+      "message": "Автоматически переподключаться к KeePAssXC."
+   },
+   "optionsCheckboxOTPIcons": {
+      "description": "Activate OTP field icons textbox text.",
+      "message": "Активировать значки полей 2FA/OTP."
+   },
+   "optionsCheckboxShowGroupNameInAutocomplete": {
+      "description": "Show group name in autocomplete checkbox text.",
+      "message": "Отображение имени группы в списке автозаполнения, когда учетные данные принадлежат к различным группам."
+   },
+   "optionsCheckboxShowLoginNotifications": {
+      "description": "Show login notifications checkbox text.",
+      "message": "Показывать уведомление, когда есть новые учетные данные для сохранения в базе данных."
+   },
+   "optionsCheckboxShowNotifications": {
+      "description": "Show notifications checkbox text.",
+      "message": "Показывать уведомления."
+   },
+   "optionsCheckboxUsePasswordGenerator": {
+      "description": "Activate password generator icons checkbox text.",
+      "message": "Вызов генератора паролей."
+   },
+   "optionsCheckboxUsernameIcons": {
+      "description": "Activate username field icons textbox text.",
+      "message": "Активировать значки полей имени пользователя."
+   },
+   "optionsClearCredentialsTimeout": {
+      "description": "Clear credentials label text.",
+      "message": "Очищать учетные данные с неактивных вкладок через (в секундах, от 0 до 3600)"
+   },
+   "optionsClearCredentialsTimeoutHelpText": {
+      "description": "Clear credentials timeout help text.",
+      "message": "Учетные данные очищаются из фоновых вкладок через определенное время. Разрешения для этих страниц будут запрошены вновь."
+   },
+   "optionsColumnDelete": {
+      "description": "Site preferences list column title.",
+      "message": "Удалить"
+   },
+   "optionsColumnIgnore": {
+      "description": "Site preferences list column title.",
+      "message": "Пропустить"
+   },
+   "optionsColumnPageURL": {
+      "description": "Site preferences list column title.",
+      "message": "URL страницы"
+   },
+   "optionsColumnUsernameOnly": {
+      "description": "Site preferences list column title.",
+      "message": "Определение только по логину"
+   },
+   "optionsConfigureShortcuts": {
+      "description": "Keyboard shortcut button and title text.",
+      "message": "Настроить ярлыки"
+   },
+   "optionsConnectedDatabasesNotFound": {
+      "description": "Shown in the connected databases table when there is no connected databases.",
+      "message": "Нет подключенных баз данных."
+   },
+   "optionsConnectedDatabasesTab": {
+      "description": "Connected Databases tab text.",
+      "message": "Подключенные базы"
+   },
+   "optionsConnectedDatabasesText": {
+      "description": "Info text about connected databases.",
+      "message": "Эти базы данных KeePassXC подключены к KeePassXC-Browser."
+   },
+   "optionsCredentialSortSelectionHeader": {
+      "description": "Credential sort option header text.",
+      "message": "Упорядочить данные по"
+   },
+   "optionsCustomFieldsConfirmation": {
+      "description": "Confirmation text when removing saved custom login fields.",
+      "message": "Вы действительно хотите удалить сохраненные пользовательские поля логина на странице: $1"
+   },
+   "optionsCustomFieldsConfirmationHelpText": {
+      "description": "Part of confirmation text when removing saved custom login fields.",
+      "message": "KeePassXC-Browser будет автоматически обнаруживать поля логина при следующем посещении этой страницы."
+   },
+   "optionsCustomFieldsNotFound": {
+      "description": "Shown when no saved custom credentials are saved.",
+      "message": "Нет сохраненных пользовательских полей логина."
+   },
+   "optionsCustomFieldsRemove": {
+      "description": "Confirmation text when removing saved custom login fields.",
+      "message": "Удалить сохраненные пользовательские поля логина?"
+   },
+   "optionsCustomFieldsTab": {
+      "description": "Saved custom login fields tab text.",
+      "message": "Свои поля логина"
+   },
+   "optionsCustomFieldsTabHelpTextFirst": {
+      "description": "Saved custom login fields info text, first part.",
+      "message": "Если KeePassXC-Browser обнаруживает неверные поля логина, вы можете сами указать правильные поля."
+   },
+   "optionsCustomFieldsTabHelpTextSecond": {
+      "description": "Saved custom login fields info text, second part.",
+      "message": "Перейдите на страницу и нажмите значок KeePassXC-Browser, затем выберите "
+   },
+   "optionsCustomFieldsTabHelpTextThird": {
+      "description": "Saved custom login fields info text, third part.",
+      "message": "Здесь можно управлять сохраненными пользовательскими полями входа."
+   },
+   "optionsCustomFieldsTableCaption": {
+      "description": "Table caption of Custom login fields page.",
+      "message": "Вы можете управлять сохраненными пользовательскими полями логина, используя таблицу ниже."
+   },
+   "optionsDatabaseCreated": {
+      "description": "Database list column title.",
+      "message": "Создан"
+   },
+   "optionsDatabaseDelete": {
+      "description": "Database list column title.",
+      "message": "Удалить"
+   },
+   "optionsDatabaseIdentifier": {
+      "description": "Database list column title.",
+      "message": "Идентификатор"
+   },
+   "optionsDatabaseKey": {
+      "description": "Database list column title.",
+      "message": "Ключ"
+   },
+   "optionsDatabaseLastUsed": {
+      "description": "Database list column title.",
+      "message": "Последний"
+   },
+   "optionsDatabasesRemoveIdentifier": {
+      "description": "Confirmation text when removing database from the list.",
+      "message": "Удалить идентификатор из списка баз данных?"
+   },
+   "optionsDatabasesRemoveIdentifierConfirmFirst": {
+      "description": "Confirmation text when removing database from the list.",
+      "message": "Вы действительно хотите удалить следующий идентификатор из списка баз данных?"
+   },
+   "optionsDatabasesRemoveIdentifierConfirmSecond": {
+      "description": "Confirmation text when removing database from the list, second part.",
+      "message": "Базу данных можно в любое время подключить повторно."
+   },
+   "optionsDefault": {
+      "description": "Default setting text.",
+      "message": "По умолчанию: $1"
+   },
+   "optionsDefaultGroupHelpText": {
+      "description": "Default group help text.",
+      "message": "Разделите группу слэшами, например: Группа/ДочерняяГруппа."
+   },
+   "optionsDownloadFaviconAfterSave": {
+      "description": "Download favicon after save checkbox label text.",
+      "message": "Download favicon after save"
+   },
+   "optionsDownloadFaviconAfterSaveHelpText": {
+      "description": "Download favicon after save help text.",
+      "message": "Favicon will be automatically downloaded for the new credential."
+   },
+   "optionsErrorInvalidURL": {
+      "description": "Error shown when input field has an incorrect URL.",
+      "message": "Неверный URL. Пожалуйста, проверьте ввод."
+   },
+   "optionsErrorInvalidValue": {
+      "description": "Error shown when input field has an incorrect value.",
+      "message": "Неверное значение. Пожалуйста, проверьте ввод."
+   },
+   "optionsErrorValueExists": {
+      "description": "Error shown when trying to add a duplicate value to the list.",
+      "message": "Значение уже существует в списке."
+   },
+   "optionsExtensionTitle": {
+      "description": "Extension title in settings page",
+      "message": "Расширение"
+   },
+   "optionsFillingCredentialsTitle": {
+      "description": "Filling credentials title in settings page",
+      "message": "Заполнение учетных данных"
+   },
+   "optionsGeneralSettingsTab": {
+      "description": "General Settings tab text.",
+      "message": "Общие настройки"
+   },
+   "optionsImportExportSettings": {
+      "description": "Settings page header text for import/export.",
+      "message": "Импорт/экспорт настроек"
+   },
+   "optionsImportSettingsDialogText": {
+      "description": "Import settings confirmation dialog help text.",
+      "message": "Текущие настройки будут переопределены. Вы действительно хотите импортировать файл настроек?"
+   },
+   "optionsImportSettingsDialogTitle": {
+      "description": "Import settings confirmation dialog title text.",
+      "message": "Импорт настроек из внешнего файла?"
+   },
+   "optionsInfinite": {
+      "description": "Infinite setting text.",
+      "message": "Неопределенный: $1"
+   },
+   "optionsKeePassXCVersionRequired": {
+      "description": "KeePassXC version requirement text.",
+      "message": "Требуемая версия KeePassXC:  $1"
+   },
+   "optionsKeyboardShortcutsHeader": {
+      "description": "Keyboard shortcut header text.",
+      "message": "Клавиатурные сокращения"
+   },
+   "optionsLabelDefaultGroup": {
+      "description": "Default group options text.",
+      "message": "Группа по умолчанию для сохранения новых паролей:"
+   },
+   "optionsLabelDefaultGroupCheckboxHelpText": {
+      "description": "Default checkbox explanation help text.",
+      "message": "Когда включено, всплывающее окошко показывает список групп."
+   },
+   "optionsLabelDefaultGroupCheckboxText": {
+      "description": "Default group checkbox help text.",
+      "message": "Всегда спрашивать, куда сохранять новые учетные данные"
+   },
+   "optionsLatestVersion": {
+      "description": "Settings page info text about the latest KeePassXC version.",
+      "message": "Новейшая версия KeePassXC: $1"
+   },
+   "optionsMenuAbout": {
+      "description": "About page header.",
+      "message": "Сведения"
+   },
+   "optionsMenuConnectedDatabases": {
+      "description": "Connected Databases page header.",
+      "message": "Подключенные базы"
+   },
+   "optionsMenuCustomFields": {
+      "description": "Custom login fields page header.",
+      "message": "Свои поля логина"
+   },
+   "optionsMenuGeneral": {
+      "description": "General settings page header.",
+      "message": "Общие"
+   },
+   "optionsMenuSitePreferences": {
+      "description": "Site preferences page header.",
+      "message": "Настройки сайта"
+   },
+   "optionsPredefinedSiteList": {
+      "description": "Predefined site list details button text.",
+      "message": "Предопределенные сайты"
+   },
+   "optionsRadioMonth": {
+      "description": "Radio button text.",
+      "message": "каждый месяц"
+   },
+   "optionsRadioNever": {
+      "description": "Radio button text.",
+      "message": "никогда"
+   },
+   "optionsRadioText": {
+      "description": "Text above radio buttons in the settings page.",
+      "message": "Проверять обновления KeePassXC:"
+   },
+   "optionsRadioThreeDays": {
+      "description": "Radio button text.",
+      "message": "каждые 3 дня"
+   },
+   "optionsRadioWeek": {
+      "description": "Radio button text.",
+      "message": "каждую неделю"
+   },
+   "optionsRecommended": {
+      "description": "Recommended setting text.",
+      "message": "Рекомендуется: $1"
+   },
+   "optionsRedirectAllowance": {
+      "description": "Redirect allowance range input text.",
+      "message": "Количество разрешенных перенаправлений: $1"
+   },
+   "optionsRedirectAllowanceHelpText": {
+      "description": "Redirect allowance help text.",
+      "message": "Число страниц для цикличного перебора после смещения перенаправления перед деактивацией значка"
+   },
+   "optionsSaveDomainOnly": {
+      "description": "Save domain only checkbox text.",
+      "message": "Сохранять только домен."
+   },
+   "optionsSaveDomainOnlyCustomLoginHelpText": {
+      "description": "Save domain only option help text.",
+      "message": "При сохранении новых пользовательских полей для логина сохраняйте только домен, а не весь URL."
+   },
+   "optionsSaveDomainOnlyHelpText": {
+      "description": "Save domain only option help text.",
+      "message": "При сохранении новых учетных данных сохранять только домен, а не полный URL."
+   },
+   "optionsSavingCredentialsTitle": {
+      "description": "Saving credentials title in settings page",
+      "message": "Сохранение учетных данных"
+   },
+   "optionsSelectionAutoSubmit": {
+      "description": "Site preferences option selection.",
+      "message": "Выключить автоподстановку"
+   },
+   "optionsSelectionFull": {
+      "description": "Site preferences option selection.",
+      "message": "Отключить все функции"
+   },
+   "optionsSelectionNormal": {
+      "description": "Site preferences option selection.",
+      "message": "Отключить новые/измененные учетные данные"
+   },
+   "optionsSelectionNothing": {
+      "description": "Site preferences option selection.",
+      "message": "Включить все функции"
+   },
+   "optionsShortcutsDanger": {
+      "description": "Error message for changing keyboard shortcuts.",
+      "message": "Ошибка: Ярлык для $1 изменен не был!"
+   },
+   "optionsShortcutsInfo": {
+      "description": "Info message for changing keyboard shortcuts.",
+      "message": "Ярлык для $1 был сброшен."
+   },
+   "optionsShortcutsSuccess": {
+      "description": "Message for successful keyboard shortcut change.",
+      "message": "Ярлык для $1 был успешно изменен."
+   },
+   "optionsShowGroupNameInAutocompleteHelpText": {
+      "description": "Show group name in autocomplete help text.",
+      "message": "При заполнении учетных данных из разных групп, будет показано имя группы."
+   },
+   "optionsShowLoginFormIconHelpText": {
+      "description": "Username field icon option help text.",
+      "message": "Добавляет значок в поля имени пользователя для заполнения учетных данных одним щелчком мыши."
+   },
+   "optionsShowNotificationsHelpText": {
+      "description": "Show notifications option help text.",
+      "message": "Уведомлять об ошибках, когда требуется вмешательство пользователя."
+   },
+   "optionsShowOTPIconHelpText": {
+      "description": "OTP field icon option help text.",
+      "message": "Добавляет значок в поля ввода, которые идентифицируются как OTP/2FA."
+   },
+   "optionsSitePreferencesConfirmation": {
+      "description": "Confirmation text when removing site from site preferences.",
+      "message": "Вы действительно хотите удалить указанный сайт из списка: $1"
+   },
+   "optionsSitePreferencesConfirmationHelpText": {
+      "description": "Part of confirmation text when removing site preferences.",
+      "message": "KeePassXC-Browser включит все функции для этого сайта и удалит определение только по логину."
+   },
+   "optionsSitePreferencesManualAddHelp": {
+      "description": "Help text for adding site manually on Site preferences tab.",
+      "message": "URL-адрес должен начинаться с \u003Ccode>https://\u003C/code>, \u003Ccode>http://\u003C/code>, \u003Ccode>file://\u003C/code>, or \u003Ccode>ftp://\u003C/code> и должен содержать не менее 5 символов."
+   },
+   "optionsSitePreferencesManualAddText": {
+      "description": "Label for adding site manually on Site preferences tab.",
+      "message": "Добавить URL вручную"
+   },
+   "optionsSitePreferencesNotFound": {
+      "description": "Shown when no site preferences are saved.",
+      "message": "Нет игнорируемых сайтов."
+   },
+   "optionsSitePreferencesRemove": {
+      "description": "Confirmation text when removing ignored sites from the list.",
+      "message": "Удалить сайт?"
+   },
+   "optionsSitePreferencesSelect": {
+      "description": "Title text of select element in Site Preferences.",
+      "message": "Опция для игнорирования деталей расширения для страницы."
+   },
+   "optionsSitePreferencesTab": {
+      "description": "Site preferences fields tab text.",
+      "message": "Настройки сайта"
+   },
+   "optionsSitePreferencesTabHelpTextFirst": {
+      "description": "Site preferences info text, first part.",
+      "message": "У сайтов на этой странице особые связанные с ними методы обработки."
+   },
+   "optionsSitePreferencesTabHelpTextFourth": {
+      "description": "Site preferences info text, fourth part.",
+      "message": "Определение только по логину позволяет KeePassXC-Browser заполнять детали входа на сайтах, где логин и пароль находятся на разных страницах."
+   },
+   "optionsSitePreferencesTabHelpTextSecond": {
+      "description": "Site preferences info text, second part.",
+      "message": "Для игнорирования новых/измененных учетных данных на каком-либо сайте добавьте их ниже или щелкните по мерцающему значку KeePassXC-Browser и выберите "
+   },
+   "optionsSitePreferencesTabHelpTextThird": {
+      "description": "Site preferences info text, third part.",
+      "message": "Если сайт полностью игнорируется (выбрано \u003Cem>Отключить все функции\u003C/em>), то при посещении такого сайта плагин ничего не будет делать."
+   },
+   "optionsSitePreferencesTableCaption": {
+      "description": "Table caption of Site Preferences page.",
+      "message": "Вы можете управлять сохраненными настройками сайтов, используя таблицу ниже."
+   },
+   "optionsSortByGroupAndTitle": {
+      "desription": "Sort matching credentials by group and title option selection.",
+      "message": "по группе и заголовку"
+   },
+   "optionsSortByGroupAndUsername": {
+      "desription": "Sort matching credentials by group and username option selection.",
+      "message": "по группе и имени пользователя"
+   },
+   "optionsSortByTitle": {
+      "desription": "Sort matching credentials by title option selection.",
+      "message": "по заголовку"
+   },
+   "optionsSortByUsername": {
+      "desription": "Sort matching credentials by username option selection.",
+      "message": "по имени пользователя"
+   },
+   "optionsThemeDark": {
+      "description": "Dark theme text.",
+      "message": "Темная"
+   },
+   "optionsThemeLight": {
+      "description": "Light theme text.",
+      "message": "Светлая"
+   },
+   "optionsThemeSelection": {
+      "description": "Theme selection title text.",
+      "message": "Выберите цветовую схему"
+   },
+   "optionsThemeSelectionHeader": {
+      "description": "Theme selection header text.",
+      "message": "Цветовая схема"
+   },
+   "optionsThemeSystem": {
+      "description": "System theme text.",
+      "message": "Системная"
+   },
+   "optionsTitle": {
+      "description": "Options page title.",
+      "message": "Настройки | KeePassXC-Browser"
+   },
+   "optionsUpdatesTitle": {
+      "description": "Updates title in settings page",
+      "message": "Обновления"
+   },
+   "optionsUseObserver": {
+      "description": "Use dynamic input field detection checkbox text.",
+      "message": "Используйте динамическое определение поля ввода."
+   },
+   "optionsUseObserverHelpText": {
+      "description": "Use dynamic input field detection help text.",
+      "message": "Полезно при работе со страницами, использующими всплывающие окна или динамические диалоги. Отключите эту функцию, чтобы снизить нагрузку на процессор на медленных устройствах. При отключенных учетных данных можно вставлять только с помощью клавиатурных сокращений, контекстного меню или всплывающего окна расширения."
+   },
+   "optionsUsePasswordGeneratorHelpText": {
+      "description": "Password Generator option help text.",
+      "message": "Добавляет кнопку к полям пароля для генерирования нового пароля."
+   },
+   "optionsUsePasswordGeneratorHelpTextSecond": {
+      "description": "Password Generator option help text, second part.",
+      "message": "Пароли, созданные KeePassXC с помощью вашего профиля генерирования паролей."
+   },
+   "optionsUsePredefinedSites": {
+      "description": "Use predefined sites checkbox text.",
+      "message": "Для совместимости используйте предопределенные сайты."
+   },
+   "optionsUsePredefinedSitesHelpText": {
+      "description": "Use predefined sites option help text.",
+      "message": "Добавляет общие сайты, которые имеют формы входа только для имени пользователя, в настройки сайта."
+   },
+   "optionsUserInterfaceTitle": {
+      "description": "User interface title in settings page",
+      "message": "Пользовательский интерфейс"
+   },
+   "optionsVersionDownload": {
+      "description": "Settings page download link.",
+      "message": "Новейшую стабильную версию можно загрузить с $1"
+   },
+   "optionsVersionInfoText": {
+      "description": "Settings page version info text.",
+      "message": "Для извлечения учетных данных KeePassXC-Browser требуется KeePassXC."
+   },
+   "optionsVersionRunning": {
+      "description": "Settings page info text of user's KeePassXC version.",
+      "message": "У вас сейчас KeePassXC версии $1"
+   },
+   "password": {
+      "description": "General text for password.",
+      "message": "Пароль"
+   },
+   "passwordGeneratorCopy": {
+      "description": "Copy button text in password generator.",
+      "message": "Скопировать"
+   },
+   "passwordGeneratorError": {
+      "description": "Password generator error text when KeePassXC is closed.",
+      "message": "Невозможно получить сгенерированный пароль.\u003Cbr />Запущена ли программа KeePassXC?"
+   },
+   "passwordGeneratorErrorIsRunning": {
+      "description": "Password generator error text when KeePassXC is closed.",
+      "message": "KeePassXC запущен и подключен?"
+   },
+   "passwordGeneratorErrorTooLong": {
+      "description": "A warning text shown in the password generator.",
+      "message": "ОШИБКА:\nСгенерированный пароль длиннее допустимого!\nОн усечен до предельной длины.\n\nЗапомните новый пароль!"
+   },
+   "passwordGeneratorErrorTooLongCut": {
+      "description": "A warning text shown in the password generator.",
+      "message": "Он был усечен до предельной длины."
+   },
+   "passwordGeneratorErrorTooLongRemember": {
+      "description": "A warning text shown in the password generator.",
+      "message": "Запомните новый пароль!"
+   },
+   "passwordGeneratorFill": {
+      "description": "Fill a password in password generator.",
+      "message": "Введите пароль"
+   },
+   "passwordGeneratorGenerate": {
+      "description": "Generate button text in password generator.",
+      "message": "Создать"
+   },
+   "passwordGeneratorGenerateText": {
+      "description": "Password icon title text.",
+      "message": "Создать пароль"
+   },
+   "passwordGeneratorIcon": {
+      "description": "Alt attribute text of the password generator icon.",
+      "message": "Значок генератора паролей"
+   },
+   "passwordGeneratorLabel": {
+      "description": "Checkbox text below the password generator input field.",
+      "message": "Также заполнять следующее поле пароля"
+   },
+   "passwordGeneratorPlaceholder": {
+      "description": "Input field placeholder for generated password.",
+      "message": "Сгенерированный пароль"
+   },
+   "passwordGeneratorTitle": {
+      "description": "Password generator dialog title.",
+      "message": "Генератор паролей"
+   },
+   "passwordGeneratorTryAgain": {
+      "description": "Generate button text in password generator when not connected.",
+      "message": "Попробуйте снова"
+   },
+   "popupAuthText": {
+      "description": "A popup message shown when doing HTTP Authentication with multiple credentials present.",
+      "message": "Выберите информацию для входа, которую вы использовали."
+   },
+   "popupButtonClose": {
+      "description": "Close button text in popup or in notification.",
+      "message": "Закрыть"
+   },
+   "popupButtonDismiss": {
+      "description": "Dismiss button text in popup when updating credentials.",
+      "message": "Отклонить"
+   },
+   "popupButtonDismissHttpAuth": {
+      "description": "Dismiss button text when in HTTP Authentication popup.",
+      "message": "Отклонить и показать диалог аутентификации по умолчанию"
+   },
+   "popupButtonIgnore": {
+      "description": "Ignore button text in popup or in notification when updating credentials.",
+      "message": "Не спрашивать для этой страницы"
+   },
+   "popupButtonNew": {
+      "description": "New button text in popup when updating credentials.",
+      "message": "Новые"
+   },
+   "popupButtonUpdate": {
+      "description": "Update button text in popup when updating credentials.",
+      "message": "Обновить"
+   },
+   "popupCheckingStatus": {
+      "description": "Checking status message in popup.",
+      "message": "Проверка статуса..."
+   },
+   "popupChooseCredentialsText": {
+      "description": "Popup credential choosing button text.",
+      "message": "Выбор пользовательских полей входа для этой страницы"
+   },
+   "popupConfiguredAndAssociated": {
+      "description": "A popuo message when a connection to KeePassXC is succesful.",
+      "message": "KeePassXC-Browser подключен к KeePassXC и настроен с помощью этого идентификатора: $1"
+   },
+   "popupConfiguredNotAssociated": {
+      "description": "A popup message shown when KeePassXC is not connected but configured.",
+      "message": "KeePassXC-Browser еще не подключен к KeePassXC, но настроен с помощью идентификатора: $1"
+   },
+   "popupConnectButton": {
+      "description": "Popup Connect button text.",
+      "message": "Соединиться"
+   },
+   "popupDownloadNewVersion": {
+      "description": "Popup warning message link when KeePassXC version is not up-to-date.",
+      "message": "Пожалуйста, загрузите последнюю версию с сайта keepassxc.org"
+   },
+   "popupErrorEncountered": {
+      "description": "A text shown above error message in the popup.",
+      "message": "KeePassXC-Browser обнаружил ошибку:"
+   },
+   "popupFilterText": {
+      "description": "Text for login credentials quick filter.",
+      "message": "Фильтр:"
+   },
+   "popupLoginText": {
+      "description": "A popup message shown when one or multiple credentials are present.",
+      "message": "Выберите информацию для входа на эту страницу."
+   },
+   "popupMultiplePasswordFields": {
+      "description": "A popup message shown when web page has multiple password fields.",
+      "message": "На этой странице более одного поля для ввода пароля. Щелкните правой кнопкой мыши по одному из полей и выберите один из:"
+   },
+   "popupNeedReconfigure": {
+      "description": "A popup message shown when the extension has been disconnected from KeePassXC.",
+      "message": "KeePassXC-Browser отключен от KeePassXC."
+   },
+   "popupNeedReconfigureMessage": {
+      "description": "A popup message shown when reconnect is needed.",
+      "message": "Нажмите кнопку переподключения, чтобы установить новую связь."
+   },
+   "popupNotConfigured": {
+      "description": "A popup message shown when the extension has not been connected to KeePassXC.",
+      "message": "KeePassXC-Browser не настроен. Нажмите кнопку подключения, чтобы связать его с KeePassXC."
+   },
+   "popupReconnectButton": {
+      "description": "Popup Reconnect button text.",
+      "message": "Соединиться заново"
+   },
+   "popupRedetectButton": {
+      "description": "Popup Redetect login fields button text.",
+      "message": "Переопределить поля логина"
+   },
+   "popupReloadButton": {
+      "description": "Popup Reload button text.",
+      "message": "Перезагрузить"
+   },
+   "popupReopenButton": {
+      "description": "Popup reopen database button text.",
+      "message": "Переоткрыть базу данных"
+   },
+   "popupSettingsText": {
+      "description": "Popup Settings button text.",
+      "message": "Настройки"
+   },
+   "popupTitle": {
+      "description": "Popup window title.",
+      "message": "Всплывающее окно KeePassXC"
+   },
+   "popupURL": {
+      "description": "URL. Might not need any translation.",
+      "message": "URL: "
+   },
+   "popupUpdateAvailable": {
+      "description": "Popup warning message about old version of KeePassXC.",
+      "message": "Вы используете устаревшую версию KeePassXC."
+   },
+   "popupUsername": {
+      "description": "A username field name shown on credential update.",
+      "message": "Логин:"
+   },
+   "popupUsernameButton": {
+      "description": "Button text for adding Username-only option.",
+      "message": "Добавить опцию только для имени пользователя для этого сайта"
+   },
+   "popupUsernameFieldDetected": {
+      "description": "Text shown when page can be added to Site Preferences with Username-only option enabled.",
+      "message": "Обнаружено только одно поле Имя пользователя. Добавить URL в настройки сайта с включенной опцией Только имя пользователя?"
+   },
+   "rememberChooseCredentials": {
+      "description": "A message shown choosing what credentials user wants to update.",
+      "message": "Пожалуйста, выберите учетные данные, которые вы хотите обновить."
+   },
+   "rememberChooseGroup": {
+      "description": "A message shown choosing what group user wants to use for new credentials.",
+      "message": "Пожалуйста, выберите группу, в которую вы хотите добавить новые учетные данные."
+   },
+   "rememberCredentialsExists": {
+      "description": "Message shown when new credentials already found in database.",
+      "message": "Идентичные учетные данные уже существуют. Нечего обновлять."
+   },
+   "rememberCredentialsNotSaved": {
+      "description": "Message shown when saving operation was cancelled.",
+      "message": "Операция отменена. Учетные данные не обновлены."
+   },
+   "rememberCredentialsSaved": {
+      "description": "Message shown when new credentials are saved.",
+      "message": "Новые учетные данные для имени пользователя $1 сохранены."
+   },
+   "rememberCredentialsUpdated": {
+      "description": "Message shown when new credentials are succesfully updated.",
+      "message": "Учетные данные для имени пользователя $1 обновлены."
+   },
+   "rememberEmptyUsername": {
+      "description": "Means an empty username.",
+      "message": "(пусто)"
+   },
+   "rememberErrorCannotSaveCredentials": {
+      "description": "Error message shown when credentials cannot be saved or updated.",
+      "message": "Учетные данные не могут быть сохранены или обновлены."
+   },
+   "rememberErrorCreatingNewGroup": {
+      "description": "Error message shown when new groups cannot be created.",
+      "message": "Новая группа(группы) не может быть создана."
+   },
+   "rememberErrorDatabaseClosed": {
+      "description": "Error message shown when credentials cannot be saved or updated and the database is closed.",
+      "message": "Учетные данные не могут быть сохранены или обновлены в закрытой базе данных."
+   },
+   "rememberErrorPasswordNotChanged": {
+      "description": "Error message shown when credential password is not changed.",
+      "message": "Учетные данные не обновлены. Пароль не был изменен."
+   },
+   "rememberInfoDefaultGroupNotFound": {
+      "description": "Info message shown when default group set cannot be found.",
+      "message": "Группа по умолчанию создана в подключенной базе данных."
+   },
+   "rememberInfoText": {
+      "description": "Message when username or password has changed.",
+      "message": "Имя пользователя или пароль изменены! Сохранить?"
+   },
+   "rememberNewUsername": {
+      "description": "A message shown when a new username is detected when saving credentials.",
+      "message": "Следующее имя пользователя в данный момент не сохраняется: $1"
+   },
+   "rememberNoPassword": {
+      "description": "Message shown when no password is set when saving credentials.",
+      "message": "Пожалуйста, заполните поле пароля перед сохранением учетных данных."
+   },
+   "rememberNothingChanged": {
+      "description": "Message shown when trying to save credentials that haven't changed.",
+      "message": "ОШИБКА:\nНе обнаружены измененные учетные данные."
+   },
+   "rememberSaving": {
+      "description": "A message when saving or updating credentials.",
+      "message": "Учетные данные будут сохранены в подключенной базе данных с идентификатором $1"
+   },
+   "rememberUsernameExists": {
+      "description": "A message shown when a existing username is detected when saving credentials.",
+      "message": "Учетные данные с использованным именем пользователя выделены жирным шрифтом: $1"
+   },
+   "totpFieldIcon": {
+      "description": "OTP field icon text.",
+      "message": "Значок поля TOTP"
+   },
+   "totpFieldText": {
+      "description": "OTP field icon hover text.",
+      "message": "Введите TOTP от KeePassXC"
+   },
+   "username": {
+      "description": "General text for username.",
+      "message": "Логин"
+   },
+   "usernameDisconnectedFieldText": {
+      "description": "Username field icon hover text when KeePassXC is disconnected.",
+      "message": "KeePassXC отключен"
+   },
+   "usernameFieldIcon": {
+      "description": "Username field icon text.",
+      "message": "Значок поля Имя пользователя"
+   },
+   "usernameFieldText": {
+      "description": "Username field icon hover text.",
+      "message": "Заполнить учетные данные из KeePassXC"
+   },
+   "usernameLockedFieldText": {
+      "description": "Username field icon hover text when database is locked.",
+      "message": "База данных заблокирована"
+   }
 }

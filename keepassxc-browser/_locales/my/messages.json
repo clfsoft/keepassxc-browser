@@ -775,6 +775,14 @@
         "message": "စိတ်ကြိုက် လော့ဂ်အင်ဝင်ရောက်သည့် အကွက်သစ်များကို သိမ်းချိန်တွင် URL အပြည့်အစုံအစား ဒိုမိန်းကိုသာ သိမ်းပါ။",
         "description": "Save domain only option help text."
     },
+    "optionsDownloadFaviconAfterSave": {
+        "message": "Download favicon after save",
+        "description": "Download favicon after save checkbox label text."
+    },
+    "optionsDownloadFaviconAfterSaveHelpText": {
+        "message": "Favicon will be automatically downloaded for the new credential.",
+        "description": "Download favicon after save help text."
+    },
     "optionsAutoFillAndSendHelpText": {
         "message": "စာမျက်နှာတစ်ခုအတွက် အထောက်အထားများကို ရှာတွေ့ပြီး လော့ဂ်အင်ဝင်ရောက်မှုအမျိုးအစားသည် HTTP Basic Auth တောင်းဆိုမှု ဖြစ်ပါက KeePassXC-ဘရောက်ဇာသည် ပထမဆုံး ပေးထားသော အထောက်အထားများဖြင့် အလိုအလျောက် လော့ဂ်အင်ဝင်ရန် ကြိုးစားသည်။ အထောက်အထားများစွာ ရှိသည့်အခါ မှန်ကန်သည့်အထောက်အထားကို ရွေးရန် အဆက်အသိပေးချက်ကို အသုံးပြုနိုင်သည်။ ဤအပြင်အဆင်ကို ဖွင့်ထားသည့်တိုင်အောင် HTTP Basic Auth လော့ဂ်အင်ဝင်ရောက်မှုကို ကိုယ်တိုင် ရိုက်ထည့်နိုင်ပါသေးသည်။",
         "description": "Auto-Fill And Send option help text."
