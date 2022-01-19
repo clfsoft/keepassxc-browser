@@ -173,6 +173,10 @@ kpxcFill.setTOTPValue = function(elem, val) {
         if (comb.totpInputs && comb.totpInputs.length === 6) {
             kpxcFill.fillSegmentedTotp(elem, val, comb.totpInputs);
             return;
+        } else if (comb.totpInputs && comb.totpInputs.length === 1) {
+            //MYMOD
+            kpxcFill.fillSegmentedTotp(elem, val, comb.totpInputs);
+            return;
         }
     }
 

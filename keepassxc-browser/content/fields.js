@@ -84,6 +84,20 @@ kpxcFields.getSegmentedTOTPFields = function(inputs, combinations) {
                 iconType: kpxcIcons.iconTypes.TOTP,
                 segmented: true
             });
+        } else if (totpInputs.length === 1) {
+            //MYMOD
+            const totp = totpInputs[0];
+            totp.setAttribute('kpxc-defined', 'totp');
+            kpxcTOTPIcons.newIcon(totp, kpxc.databaseState, true);
+            kpxcIcons.icons.push({
+                field: totp,
+                iconType: kpxcIcons.iconTypes.TOTP,
+                segmented: true
+            });
+            const combination = {
+                totpInputs: totp
+            };
+            combinations.push(combination);
         }
     };
 
@@ -394,20 +408,21 @@ kpxcFields.useCustomLoginFields = async function() {
         kpxcTOTPIcons.newIcon(totp, kpxc.databaseState);
     }
 
+    const combinations = [];
     // If not all expected fields are identified, return an empty combination
     if ((creds.username && !username) || (creds.password && !password) || (creds.totp && !totp)
         || (creds.fields.length !== stringFields.length)) {
-        return [];
+        //MYMOD
+        kpxcFields.getSegmentedTOTPFields(inputFields, combinations);
+    } else {
+        combinations.push({
+            username: username,
+            password: password,
+            passwordInputs: [ password ],
+            totp: totp,
+            fields: stringFields
+        });
     }
-
-    const combinations = [];
-    combinations.push({
-        username: username,
-        password: password,
-        passwordInputs: [ password ],
-        totp: totp,
-        fields: stringFields
-    });
 
     return combinations;
 };

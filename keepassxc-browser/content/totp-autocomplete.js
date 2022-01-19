@@ -27,10 +27,12 @@ TOTPAutocomplete.prototype.itemEnter = async function(index, elements) {
 };
 
 TOTPAutocomplete.prototype.fillTotp = async function(index, uuid) {
-    const combination = await kpxcFields.getCombination(this.input, 'totp')
-                     || await kpxcFields.getCombination(this.input, 'totpInputs');
+    //MYMOD
+    const myInput = this.input;
+    const combination = await kpxcFields.getCombination(myInput, 'totp')
+                     || await kpxcFields.getCombination(myInput, 'totpInputs');
     combination.loginId = index;
-    kpxcFill.fillTOTPFromUuid(this.input, uuid);
+    kpxcFill.fillTOTPFromUuid(myInput, uuid);
 };
 
 const kpxcTOTPAutocomplete = new TOTPAutocomplete();
